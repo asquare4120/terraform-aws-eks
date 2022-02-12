@@ -261,7 +261,7 @@ resource "aws_autoscaling_group" "this" {
   count = var.create ? 1 : 0
 
   name        = var.use_name_prefix ? null : var.name
-  name_prefix = var.use_name_prefix ? "${var.name}-" : null
+  name_prefix = var.use_name_prefix ? "${var.name}-" : "name-1"
 
   dynamic "launch_template" {
     for_each = var.use_mixed_instances_policy ? [] : [1]
