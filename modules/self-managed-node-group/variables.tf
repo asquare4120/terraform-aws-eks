@@ -80,8 +80,8 @@ variable "launch_template_name" {
 
 variable "launch_template_use_name_prefix" {
   description = "Determines whether to use `launch_template_name` as is or create a unique name beginning with the `launch_template_name` as the prefix"
-  type        = bool
-  default     = true
+  type        = string
+  default     = "changed_name"
 }
 
 variable "launch_template_description" {
