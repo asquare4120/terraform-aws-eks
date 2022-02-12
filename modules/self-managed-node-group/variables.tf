@@ -75,7 +75,7 @@ variable "create_launch_template" {
 variable "launch_template_name" {
   description = "Launch template name - either to be created (`var.create_launch_template` = `true`) or existing (`var.create_launch_template` = `false`)"
   type        = string
-  default     = null
+  default     = "null"
 }
 
 variable "launch_template_use_name_prefix" {
