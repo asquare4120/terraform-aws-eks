@@ -453,7 +453,7 @@ resource "aws_security_group" "this" {
   count = local.create_security_group ? 1 : 0
 
   name        = var.security_group_use_name_prefix ? null : local.security_group_name
-  name_prefix = var.security_group_use_name_prefix ? "${local.security_group_name}-" : null
+  name_prefix = var.security_group_use_name_prefix 
   description = var.security_group_description
   vpc_id      = var.vpc_id
 
